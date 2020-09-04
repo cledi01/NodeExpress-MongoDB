@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/conFusionServer.iml" filepath="$PROJECT_DIR$/.idea/conFusionServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node-express/.idea/node-express.iml" filepath="$PROJECT_DIR$/../node-express/.idea/node-express.iml" />
     </modules>
   </component>
 </project>
