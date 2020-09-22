@@ -52,6 +52,7 @@ router.post('/signup', cors.corsWithOptions,(req, res, next) => {
 });
 
 router.post('/login', cors.corsWithOptions, (req, res, next) => {
+
   passport.authenticate('local', (err, user, info) => {
     if (err)
       return next(err);
@@ -67,6 +68,7 @@ router.post('/login', cors.corsWithOptions, (req, res, next) => {
         res.setHeader('Content-Type', 'application/json');
         res.json({success: false, status: 'Login Unsuccessful!', err: 'Could not log in user!'});
       }
+
       var token = authenticate.getToken({_id: req.user._id});
       res.statusCode = 200;
       res.setHeader('Content-Type', 'application/json');
@@ -115,5 +117,7 @@ router.get('/checkJWTtoken', cors.corsWithOptions, (req, res) => {
     }
   }) (req, res);
 });
+
+
 
 module.exports = router;
